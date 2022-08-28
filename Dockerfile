@@ -24,7 +24,7 @@ RUN pip install -U pip -qqq
 RUN conda install -y -c conda-forge jupyterlab
 
 # ------------- FROM HERE ON IS MY ICEVISISION SETUP -------------
-RUN wget https://raw.githubusercontent.com/airctic/icevision/master/icevision_install.sh && bash icevision_install.sh cuda11 && rm icevision_install.sh
+RUN wget https://raw.githubusercontent.com/airctic/icevision/master/icevision_install.sh && bash icevision_install.sh cuda11 master && rm icevision_install.sh
 
 RUN pip install torchtext==0.11.0 --upgrade
 RUN pip install opencv-python ipywidgets icevision-dashboards
